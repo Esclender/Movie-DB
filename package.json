@@ -1,0 +1,30 @@
+{
+  "name": "movie-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "(parcel ./src/frontend/index.html) & parcel watch ./src/frontend/index.html",
+    "typer": "ts-node ./src/typescript/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esclender/Movie-DB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Esclender/Movie-DB/issues"
+  },
+  "homepage": "https://github.com/Esclender/Movie-DB#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^4.9.5"
+  }
+}
