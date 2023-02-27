@@ -1,14 +1,12 @@
-import { ShowFiveTrendsPoster, getDailyTrendsMovies } from './project.service'
+import { ShowFiveTrendsPoster, showSeriesPosters } from './project.service'
 
-// ShowFiveTrendsPoster()
+ShowFiveTrendsPoster()
+showSeriesPosters()
 
-// setTimeout(() => {
-//   document.querySelector('.charge-screen')?.classList.add('puffOut')
-// }, 5000)
+setTimeout(() => {
+  document.querySelector('.charge-screen')?.classList.add('puffOut')
+}, 5000)
 
-// setTimeout(() => {
-//   document.querySelector('.charge-screen')?.classList.add('visually-hidden')
-// }, 8500)
-
-getDailyTrendsMovies()
-  .then(res => { console.log(res) })
+setTimeout(() => {
+  document.querySelector('.charge-screen')?.classList.add('visually-hidden')
+}, 8500)

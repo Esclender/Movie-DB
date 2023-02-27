@@ -67,14 +67,13 @@ body{
   justify-content: center;
   align-items: center;
 
-  position: relative;
+  position: fixed;
   z-index: 150;
   width: 100vw;
   height: 100vh;
 
   background-image: linear-gradient(to bottom, #0c0b0c 70%,   #cd1a1a);
-
-  transition: all 1.5s;
+  
 }
 
 .charge-screen > .spinner-grow {
@@ -88,8 +87,10 @@ body{
 }
 
 .movies{
+  z-index: 50;
+  position: absolute;
+  top: 605px;
   border-radius: 20px 20px 0 0;
-  margin-top: 550px;
   background-color: #0c0b0c;
   width: 100vw;
   height: 100vh;

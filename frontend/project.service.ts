@@ -48,12 +48,11 @@ export async function ShowFiveTrendsPoster (): Promise<void> {
 }
 
 export async function showSeriesPosters (): Promise<void> {
-  const posters = await getTrends()
-
-  for (let i = 0; i < 5; i++) {
+  const posters = await getDailyTrendsSeries()
+  posters.forEach((item, i) => {
     const data = posters[i]
     const posterPath = getPosters(data.poster_path)
 
-    posterMainTrendsStructure(posterPath, data.original_title, data.vote_average, data.overview, (i + 1) === 5)
-  }
+    posterPreview(posterPath, data.name as string)
+  })
 }
