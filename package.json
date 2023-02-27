@@ -2,7 +2,6 @@
   "name": "movie-db",
   "version": "1.0.0",
   "description": "",
-  "main":"index.html",
   "scripts": {
     "start": "(parcel ./frontend/index.html) & parcel watch ./frontend/index.html",
     "typer": "ts-node ./frontend/index.ts"

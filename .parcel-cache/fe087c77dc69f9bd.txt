@@ -67,7 +67,7 @@
 46C:\Users\Lenovo\Documents\movieDb\node_modules133219046947158200 1
 77C:\Users\Lenovo\Documents\movieDb\node_modules\nth-check\lib\compile.d.ts.map133218063922423708 0
 94C:\Users\Lenovo\Documents\movieDb\node_modules\eslint-plugin-es\lib\rules\no-dynamic-import.js133217589621618515 0
-46C:\Users\Lenovo\Documents\movieDb\package.json133219046950158702 0
+46C:\Users\Lenovo\Documents\movieDb\package.json133219364689486062 0
 65C:\Users\Lenovo\Documents\movieDb\node_modules\timsort\LICENSE.md133218063902457918 0
 100C:\Users\Lenovo\Documents\movieDb\node_modules\tsconfig-paths\lib\__tests__\match-path-async.test.js133217589628132880 0
 64C:\Users\Lenovo\Documents\movieDb\node_modules\magic.css\LICENSE133219019015262125 0
@@ -11951,7 +11951,7 @@
 59C:\Users\Lenovo\Documents\movieDb\node_modules\.bin\tsc.ps1133217579579590075 0
 64C:\Users\Lenovo\Documents\movieDb\node_modules\.bin\tsserver.cmd133217579579694127 0
 64C:\Users\Lenovo\Documents\movieDb\node_modules\.bin\tsserver.ps1133217579579590075 0
-53C:\Users\Lenovo\Documents\movieDb\frontend\index.html133219360171537100 0
+53C:\Users\Lenovo\Documents\movieDb\frontend\index.html133219373873866814 0
 51C:\Users\Lenovo\Documents\movieDb\frontend\index.ts133219357398917489 0
 60C:\Users\Lenovo\Documents\movieDb\frontend\project.module.ts133219345698040603 0
 61C:\Users\Lenovo\Documents\movieDb\frontend\project.service.ts133219345981459448 0
