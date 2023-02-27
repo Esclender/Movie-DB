@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/Esclender/Movie-DB/issues"
   },
-  "homepage": "https://github.com/Esclender/Movie-DB#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
