@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { type MovieData, posterMainTrendsStructure, posterPreview } from './project.module'
+import { type MovieData, posterMainTrendsStructure, posterMoviesPreview, descriptionMovie, posterPreview } from './project.module'
 
 const api = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
@@ -7,7 +7,8 @@ const api = axios.create({
     'Content-Type': 'application/json;charset=utf-8'
   },
   params: {
-    api_key: 'cee7485259c4854030b54b84409c4c13'
+    api_key: 'cee7485259c4854030b54b84409c4c13',
+    query: ''
   }
 })
 
@@ -31,7 +32,21 @@ export async function getDailyTrendsSeries (): Promise<MovieData[]> {
   return res
 }
 
-function getPosters (path: string): string {
+export async function getMovieForId (movieId: string): Promise<MovieData> {
+  const data = await api(`/movie/${movieId}`)
+  const res = data.data
+
+  return res
+}
+
+export async function getSerieForId (movieId: string): Promise<MovieData> {
+  const data = await api(`/tv/${movieId}`)
+  const res = data.data
+
+  return res
+}
+
+export function getPosters (path: string): string {
   const PosterPath = `${poster}${path}`
   return PosterPath
 }
@@ -52,7 +67,50 @@ export async function showSeriesPosters (): Promise<void> {
   posters.forEach((item, i) => {
     const data = posters[i]
     const posterPath = getPosters(data.poster_path)
+    const element = posterPreview(posterPath, data.name as string, data.id)
 
-    posterPreview(posterPath, data.name as string)
+    document.querySelector('.carrousel-series')?.append(element)
   })
+}
+
+export async function showMoviesPosters (): Promise<void> {
+  const posters = await getDailyTrendsMovies()
+  posters.forEach((item, i) => {
+    const data = posters[i]
+    const posterPath = getPosters(data.poster_path)
+    const element = posterMoviesPreview(posterPath, data.original_title, data.id)
+
+    document.querySelector('.movies-grid')?.append(element)
+  })
+}
+
+export function DescriptionMovieSerie (descrition: MovieData): void {
+  document.querySelector('.description-poster')
+    ?.setAttribute('src', getPosters(descrition.poster_path))
+
+  document.querySelector('.serieMoviesDescription')?.classList.toggle('show')
+
+  descriptionMovie(descrition.name ?? descrition.original_title, descrition.vote_average, descrition.overview, descrition.genres)
+}
+
+export async function inputSearchSerie (serieName: string): Promise<MovieData[]> {
+  const data = await api('/search/tv', {
+    params: {
+      api_key: 'cee7485259c4854030b54b84409c4c13',
+      query: serieName.toLowerCase()
+    }
+  })
+  const dataResult = data.data.results
+  return dataResult
+}
+
+export async function inputSearchMovie (movieName: string): Promise<MovieData[]> {
+  const data = await api('/search/movie', {
+    params: {
+      api_key: 'cee7485259c4854030b54b84409c4c13',
+      query: movieName.toLowerCase()
+    }
+  })
+  const dataResult = data.data.results
+  return dataResult
 }

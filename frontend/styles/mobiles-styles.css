@@ -69,8 +69,8 @@ body{
 
   position: fixed;
   z-index: 150;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
   background-image: linear-gradient(to bottom, #0c0b0c 70%,   #cd1a1a);
   
@@ -89,16 +89,17 @@ body{
 .movies{
   z-index: 50;
   position: absolute;
-  top: 605px;
+  top: 600px;
   border-radius: 20px 20px 0 0;
   background-color: #0c0b0c;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 
   box-shadow: 1px 87px 92px -48px rgba(227,25,25,0.75) inset;
 
   padding: 20px;
   padding-top: 50px;
+
+  overflow: hidden;
 }
 
 .title_section > h3{
@@ -126,6 +127,7 @@ body{
 .serie-poster{
   display: flex;
   flex-flow: column;
+  width:250px;
 }
 
 .serie-poster >span{
@@ -143,9 +145,150 @@ body{
   border-radius: 20px;
 }
 
+.movies-grid{
+  display: flex;
+  gap: 30px;
+  flex-flow: column;
+  align-items: center;
+}
+
+/*MOVIE DESCRIPTION*/
+
+.closer-description{
+  border: none;
+  background-color: transparent;
+}
+
+.closer-description > i{
+  font-size: 30px;
+}
 
 
+.offcanvas-header{
+  z-index: 10;
+}
 
+.body-descriptions{
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  width: 100%;
+  height: 55%;
+
+  border-radius: 25px 25px 0 0;
+  background-color: #0c0b0c;
+}
+
+.body-descriptions > h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f2d4d4;
+  text-shadow:
+  0 0 29px rgba(241, 0, 0, .7),
+  0 0 59px rgba(241, 0, 0, .7),
+  0 0 59px rgba(241, 0, 0, .7),
+  0 0 119px rgba(241, 0, 0, .7);
+}
+
+.body-descriptions > p{
+  color:#fff ;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow:
+  0 0 10px rgba(255, 255, 255, .7),
+  0 0 40px rgba(255, 255, 255, .7),
+  0 0 100px rgba(255, 255, 255, .7);
+}
+
+
+.description-poster{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 500px;
+}
+
+.genres > .badge{
+  font-size: 20px;
+  margin: 10px;
+}
+
+
+/*SEARCH INPUT*/
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.input {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 18px 16px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+.input:focus::placeholder {
+  color: rgb(131, 128, 128);
+}
+
+.input:focus,.input:not(:placeholder-shown) {
+  background-color: #fff;
+  border: 1px solid rgb(128, 12, 12);
+  width: 220px;
+  cursor: none;
+  padding: 18px 16px 18px 40px;
+}
+
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: -1;
+  fill: rgb(255, 4, 0);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.input:hover + .icon {
+  transform: rotate(360deg);
+  transition: .2s ease-in-out;
+}
+
+.input:focus + .icon,.input:not(:placeholder-shown) + .icon {
+  z-index: 0;
+  background-color: transparent;
+  border: none;
+}
+
+/*SEARCH INPUT*/
+
+.searchedMovies{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.searchedMovies > .serie-poster{
+  width: 180px;
+}
+
+.searchedMovies > .serie-poster > img{
+  width: 100%;
+}
 
 
 

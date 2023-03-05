@@ -6,13 +6,14 @@
     "start": "(parcel ./frontend/index.html) & parcel watch ./frontend/index.html",
     "typer": "ts-node ./frontend/index.ts"
   },
-  "base":"./frontend/index.html",
+  "base":"/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Esclender/Movie-DB.git"
   },
   "keywords": [],
   "author": "",
+  "type":"module",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Esclender/Movie-DB/issues"
